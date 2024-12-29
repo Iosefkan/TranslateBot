@@ -1,7 +1,7 @@
 FROM golang:1.23.4
 
 RUN apt update && apt install -y libasound2-dev
-WORKDIR /usr/src/app
+WORKDIR /var/app
 
 COPY go.mod go.sum ./
 RUN go mod download && go mod verify
